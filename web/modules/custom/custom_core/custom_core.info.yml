@@ -1,0 +1,5 @@
+name: Custom Core Concepts
+description: Event, Config, Content  and plugin type implementation
+type: module
+core: 8.x
+package: Learn

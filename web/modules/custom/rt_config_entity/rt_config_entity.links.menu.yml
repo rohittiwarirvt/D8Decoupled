@@ -1,0 +1,3 @@
+rt_config_entity.menu:
+  title: Config Entity
+  route_name: entity.robot.list

@@ -1,0 +1,10 @@
+entity.rt_content_entity_contact.collection:
+  title: 'Content Entity Example: Contacts Listing'
+  route_name: entity.rt_content_entity_contact.collection
+  description: 'List Contacts'
+rt_content_entity_contact.admin.structure.settings:
+  title: 'Contact settings'
+  description: 'Configure Contact Entity'
+  route_name: rt_content_entity.contact_settings
+  parent: system.admin_structure
+

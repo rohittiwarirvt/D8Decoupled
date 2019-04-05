@@ -1,0 +1,8 @@
+name: RT Content Entity Example
+type: module
+description: Demonstrates how to create content Entity
+package: Learn
+dependencies:
+  - drupal:options
+  - drupal:user
+core: '8.x'

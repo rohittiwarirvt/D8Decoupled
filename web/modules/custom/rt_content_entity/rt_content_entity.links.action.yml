@@ -1,0 +1,6 @@
+rt_content_entity.contact_add:
+  route_name: rt_content_entity.contact_add
+  title: 'Add Contact'
+  appears_on:
+    - entity.rt_content_entity_contact.collection
+    - entity.rt_content_entity_contact.canonical

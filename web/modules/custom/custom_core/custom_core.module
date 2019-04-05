@@ -1,0 +1,16 @@
+<?php
+
+
+use Drupal\custom_core\Event\UserLoginEvent;
+
+
+function custom_core_user_login($account) {
+
+  // Instantiate our event;
+
+  $event = new UserLoginEvent($account);
+
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+
+  $event_dispatcher->dispatch(UserLoginEvent::EVENT_NAME, $event);
+}

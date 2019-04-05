@@ -1,0 +1,33 @@
+entity.robot.list:
+  path: 'rt-config-entity'
+  defaults:
+    _entity_list: robot
+    _title: 'Config entity'
+  requirements:
+    _permission: 'administer robots'
+
+
+entity.robot.add_form:
+  path: '/rt-config-entity/add'
+  defaults:
+    _title: 'Add robot'
+    _entity_form: robot.add
+  requirements:
+    _entity_create_access: robot
+
+
+entity.robot.edit_form:
+  path: '/rt-config-entity/manage/{robot}'
+  defaults:
+    _title: 'Edit robot'
+    _entity_form: robot.edit
+  requirements:
+    _entity_access: robot.update
+
+entity.robot.delete_form:
+  path: '/rt-config-entity/manage/{robot}/delete'
+  defaults:
+    _title: 'Delete robot'
+    _entity_form: robot.delete
+  requirements:
+    _entity_access: robot.delete

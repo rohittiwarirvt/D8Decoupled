@@ -1,0 +1,19 @@
+rt_config_entity.robot.*:
+  type: mapping
+  label: 'Robot'
+  mapping:
+    id:
+      type: string
+      label: 'Robot id'
+    uuid:
+      type: string
+      label: UUID
+    label:
+      type: label
+      label: 'Label'
+    floopy:
+      type: boolean
+      label: 'Floopy'
+    langcode:
+      type: string
+      label: 'Default language'

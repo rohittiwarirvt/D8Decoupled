@@ -1,0 +1,79 @@
+<?php
+
+
+
+function rt_block_install() {
+  // Insert some example data into our schema.
+  //
+  $entries = [
+    [
+      'name' => 'John',
+      'surname' => 'Snow',
+      'age' => 29
+    ],
+    [
+      'name' => 'Rohit',
+      'surname' => 'Tiwari',
+      'age' => 28,
+      'uid' => 1,
+    ]
+  ];
+
+  $connection = \Drupal::database();
+  foreach ($entries as $entry) {
+    $connection->insert('dbtng_example')->fields($entry)->execute();
+  }
+}
+
+/**
+ * hook_schema()
+ *
+ */
+
+function rt_block_schema() {
+  $schema['dbtng_example'] = [
+    'description' => 'Stores example person information for demonstration purpose',
+    'fields' => [
+      'pid' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique Person ID'
+      ],
+      'uid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Create user's {users}.uid"
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => " Name of the person"
+      ],
+      'surname' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => " SurName of the person"
+      ],
+      'age' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'size' => 'tiny',
+        'description' => 'The age of person in years'
+      ]
+    ],
+    'primary key' => ['pid'],
+    'indexes' => [
+      'name' => ['name'],
+      'surname' => ['surname'],
+      'age' => ['age']
+    ]
+  ];
+
+  return $schema;
+}

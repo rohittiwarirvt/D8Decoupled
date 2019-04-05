@@ -1,0 +1,4 @@
+services:
+  dbtng_example.repository:
+    class: Drupal\rt_block\Utility\DbtngExampleRepository
+    arguments: ['@database', '@string_translation', '@messenger']

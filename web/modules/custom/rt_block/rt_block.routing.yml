@@ -1,0 +1,66 @@
+rt_block.description:
+  path: '/learn/block-example'
+  defaults:
+    _controller: '\Drupal\rt_block\Controller\BlockExampleController::description'
+    _title: 'Block Example -Rohit'
+  requirements:
+    _permission: 'access content'
+form_api_example.description:
+  path: '/learn/form-api-example'
+  defaults:
+    _controller: '\Drupal\rt_block\Controller\FormApiExampleController::description'
+  requirements:
+    _permission: 'access content'
+form_api_example.simple_form:
+  path: '/learn/form-api-example/simple-form'
+  defaults:
+    _form:  '\Drupal\rt_block\Form\SimpleForm'
+    _title: 'Simple form'
+  requirements:
+    _permission: 'access content'
+form_api_example.modal_form:
+  path: '/examples/form-api-example/modal-form/{nojs}'
+  defaults:
+    _form:  '\Drupal\rt_block\Form\ModalForm'
+    _title: 'Modal form'
+    nojs: ajax
+  requirements:
+    _permission: 'access content'
+dbtng_example.generate_entry_list:
+  path: '/learn/dbtng-example'
+  defaults:
+    _title: 'DBTNG Example'
+    _controller: '\Drupal\rt_block\Controller\DbtngExampleController::entryList'
+  requirements:
+    _permission: 'access content'
+dbtng_example.list:
+  path: '/learn/dbtng-example/list'
+  defaults:
+    _title: 'List'
+    _controller: '\Drupal\rt_block\Controller\DbtngExampleController::entryList'
+  requirements:
+    _permission: 'access content'
+
+dbtng_example.add:
+  path: '/learn/dbtng-example/add'
+  defaults:
+    _title: 'Add entry'
+    _form: '\Drupal\rt_block\Form\DbtngExampleAddForm'
+  requirements:
+    _permission: 'access content'
+
+dbtng_example.update:
+  path: '/learn/dbtng-example/update'
+  defaults:
+    _title: 'Update entry'
+    _form: '\Drupal\rt_block\Form\DbtngExampleUpdateForm'
+  requirements:
+    _permission: 'access content'
+
+dbtng_example.advanced:
+  path: '/learn/rt_block/advanced'
+  defaults:
+    _title: 'Advanced list'
+    _controller: '\Drupal\rt_block\Controller\DbtngExampleController::entryAdvancedList'
+  requirements:
+    _permission: 'access content'

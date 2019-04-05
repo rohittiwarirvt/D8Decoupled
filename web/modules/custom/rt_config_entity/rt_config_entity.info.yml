@@ -1,0 +1,5 @@
+name: RT Config Entity Example
+type: module
+description: Demonstrates how to create config Entity
+package: Learn
+core: '8.x'

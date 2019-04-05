@@ -1,0 +1,49 @@
+entity.rt_content_entity_contact.canonical:
+  path: '/rt_content_entity_contact/{rt_content_entity_contact}'
+  defaults:
+    _entity_view: 'rt_content_entity_contact'
+    _title: 'Contact Content'
+  requirements:
+    _entity_access: 'rt_content_entity_contact.view'
+
+
+entity.rt_content_entity_contact.collection:
+  path: '/rt_content_entity_contact/list'
+  defaults:
+    _entity_list: 'rt_content_entity_contact'
+    _title: 'Contact list'
+  requirements:
+    _permission: 'view contact entity'
+
+rt_content_entity.contact_add:
+  path: '/rt_content_entity_contact/add'
+  defaults:
+    _entity_form: rt_content_entity_contact.default
+    _title: 'Add contact'
+  requirements:
+    _entity_create_access: 'rt_content_entity_contact'
+
+entity.rt_content_entity_contact.edit_form:
+  path: '/rt_content_entity_contact/{rt_content_entity_contact}/edit'
+  defaults:
+    _entity_form: rt_content_entity_contact.default
+    _title: 'Edit contact'
+  requirements:
+    _entity_access: 'rt_content_entity_contact.update'
+
+
+entity.rt_content_entity_contact.delete_form:
+  path: '/contact/{rt_content_entity_contact}/delete'
+  defaults:
+    _entity_form: rt_content_entity_contact.delete
+    _title: 'Delete contact'
+  requirements:
+    _entity_access: 'rt_content_entity_contact.delete'
+
+rt_content_entity.contact_settings:
+  path: '/admin/structure/rt_content_entity_contact_settings'
+  defaults:
+    _form: '\Drupal\rt_content_entity\Form\ContactSettingsForm'
+    _title: 'Contact settings'
+  requirements:
+    _permission: 'administer contact entity'
