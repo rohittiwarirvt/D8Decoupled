@@ -1,0 +1,8 @@
+rt_library.react:
+  path: '/rt_library/react'
+  defaults:
+    _title: 'React Libraru in usage'
+    _controller: '\Drupal\rt_library\Controller\ReactController::view'
+  requirements:
+    _permission: 'access content'
+

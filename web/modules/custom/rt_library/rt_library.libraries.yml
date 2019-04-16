@@ -1,0 +1,30 @@
+angular.angularjs:
+  remote: https://github.com/angular
+  version: 1.4.4
+  license:
+    name: MIT
+    url: https://github.com/angular/angular.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js: { type: external, minified: true }
+font-awesome:
+  remote: https://fontawesome.com
+  version: 5.3.1
+  license:
+    name: MIT
+    url: https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt
+    gpl-compatible: true
+  css:
+    theme:
+      https://use.fontawesome.com/releases/v5.3.1/css/all.css: { type: external, minified: true }
+react.reactjs:
+  remote: https://github.com/facebook/react
+  version: 1.7
+  license:
+    name: MIT
+    url: https://github.com/facebook/react/blob/master/LICENSE.txt
+  js:
+    //unpkg.com/react/umd/react.development.js: {type: external}
+    //unpkg.com/react-dom/umd/react-dom.development.js: { type: external}
+    https://unpkg.com/babel-standalone@6/babel.min.js: { type: external}
+    js/my-react.js: { attributes: {type: 'text/babel'} }
