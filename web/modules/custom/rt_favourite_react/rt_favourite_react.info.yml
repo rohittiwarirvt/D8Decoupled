@@ -1,0 +1,6 @@
+name: "React Favourite example"
+core: 8.x
+description: "Example for decoupled drupal example"
+type: module
+dependencies:
+  - jsonapi
