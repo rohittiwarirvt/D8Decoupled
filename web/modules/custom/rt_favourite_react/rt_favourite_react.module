@@ -1,2 +1,18 @@
 <?php
 
+
+
+/**
+ * Implements template_preprocess_node().
+ */
+
+function favourite_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ( $variables['view_mode'] == 'full') {
+    $variables['#attached']['library'][] = 'favourite/favourite';
+    $variables['content']['favourite'] = array(
+      '#markup' => '<div id="favourite"></div>',
+    );
+  }
+}
+

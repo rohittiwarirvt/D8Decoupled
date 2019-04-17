@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.user.field_favourites
     - node.type.article
-    - note.type.page
+    - node.type.page
   module:
     - user
 id: user.user.field_favourites
