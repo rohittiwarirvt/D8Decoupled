@@ -9,7 +9,7 @@
 function rt_favourite_react_preprocess_node(&$variables) {
   $node = $variables['node'];
   if ( $variables['view_mode'] == 'full') {
-    $variables['#attached']['library'][] = 'rt_favourite_react/favourite';
+    $variables['#attached']['library'][] = 'rt_favourite_react/react_javascript';
     $variables['content']['favourite'] = array(
       '#markup' => '<div id="favourite"></div>',
     );
